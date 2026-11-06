@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h2, h1 {
+    margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto minmax(0, 1fr);
+  height: 100vh;
+}
+
+.sidebar {
+    grid-row: 1/3;
+    background-color: #00ACE6;
+    color: white;
+    padding-left: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+}
+
+.sidebar li {
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+
+.sidebar-list {
+    display: grid;
+    padding-left: 0px;
+    grid-template-rows: repeat(6, 50px);
+    margin-bottom: 0px;
+}
+
+.sidebar-list2 {
+    display: grid;
+    padding-left: 0px;
+    grid-template-rows: repeat(3, 50px);
+    margin-top: 0;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.dashboard-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.header {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.main-content-container {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+    min-height: 0;
+    background-color: #F2F2F2;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px repeat(3, minmax(0, 1fr));
+    grid-row: 1/3;
+    min-height: 0;
+    gap:20px
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: 50px minmax(0, 1fr);
+    min-height: 0;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: 50px minmax(0, 1fr);
+    min-height: 0;
+}
+
+.card {
+    padding-left: 10px;
+}
+
+
+#project-header {
+    grid-column: 1/3;
+}
+
+#trending-container, #announcements-container {
+    border: solid black;
+    display: grid;
+    padding: 20px;
+    min-height: 0;
+    grid-auto-rows: minmax(0, 1fr);
+}
+
+.header-action-buttons {
+    display: flex;
+    gap: 20px;
+}
+.header-button {
+    border-radius: 15px;
+    border: none;
+    height: 2rem;
+    width: 6rem;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 800px);
+    gap: 10px;
+}
+
+.search-icon, .notif-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.user-settings-container {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.card, #trending-container, #announcements-container {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
